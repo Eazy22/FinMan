@@ -1,13 +1,15 @@
 import express from "express";
 import cors from "cors"
-import "dotenv/config";
+import dotenv from "dotenv"
 import mongoose from "mongoose";
+
+dotenv.config({path: ".env.local"})
 
 const app = express();
 
-const PORT = process.env.PORT;
+const PORT = process.env.PORT
 
-const MONGO_URI = process.env.MONGODB_URI;
+const MONGO_URI = process.env.MONGO_URI
 
 app.use(express.json())
 app.use(cors())
