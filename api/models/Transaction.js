@@ -8,7 +8,9 @@ const transactionSchema = new mongoose.Schema({
     source: {type: String, enum: ["manual", "receipt"], default: "manual"},
     receiptImage: {type : String},
     budget:  {type: mongoose.Schema.Types.ObjectId, ref: "Budget", required: true}
+
 })
+
 
 const Transaction = mongoose.model("Transaction", transactionSchema)
 
